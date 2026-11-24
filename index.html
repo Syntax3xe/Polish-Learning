@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polski Path</title>
+  <meta name="description" content="Learn Polish from English with bite-sized lessons." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='16' rx='3' fill='%23ffffff' stroke='%23ddd'/%3E%3Crect y='16' width='32' height='16' rx='3' fill='%23dc143c'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="logo"><span class="flag" aria-hidden="true"></span><span class="logo-text">polski<b>path</b></span></div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="learn"><span class="ico">🏠</span><span class="lbl">Learn</span></button>
+        <button class="nav-item" data-view="words"><span class="ico">📖</span><span class="lbl">Words</span></button>
+        <button class="nav-item" data-action="practice"><span class="ico">💪</span><span class="lbl">Practice</span></button>
+        <button class="nav-item" data-action="settings"><span class="ico">⚙️</span><span class="lbl">Settings</span></button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar" id="topbar"></header>
+      <section id="view-learn" class="view"></section>
+      <section id="view-words" class="view" hidden></section>
+    </main>
+
+    <aside class="rightbar" id="rightbar"></aside>
+  </div>
+
+  <!-- Lesson player -->
+  <div id="lesson" class="lesson" hidden>
+    <div class="lesson-top">
+      <button class="icon-btn" id="quit-btn" title="Quit lesson" aria-label="Quit lesson">✕</button>
+      <div class="progress" role="progressbar" aria-label="Lesson progress"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="lesson-hearts" id="lesson-hearts"></div>
+    </div>
+    <div class="lesson-body" id="lesson-body"></div>
+    <footer class="lesson-foot" id="lesson-foot">
+      <div class="foot-inner">
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+        <button class="btn btn-primary" id="check-btn" disabled>Check</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lesson complete / failed -->
+  <div id="complete" class="complete" hidden></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal-backdrop" hidden>
+    <div class="modal" id="modal-box" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <noscript><p style="padding:24px">Polski Path needs JavaScript to run.</p></noscript>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
