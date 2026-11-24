@@ -2,7 +2,7 @@
 
 A free, browser-based game for learning Polish from English, with short lessons, hearts, XP and daily streaks.
 
-**Play it:** https://YOUR-USERNAME.github.io/polish-learning/
+**Play it:** https://syntax3xe.github.io/Polish-Learning/
 
 ## Features
 
